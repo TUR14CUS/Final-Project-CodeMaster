@@ -1,6 +1,7 @@
 <?php
   include_once 'header.php';
   $pageTitle = "Home";
+  $css = "static/home.css";
 ?>
 
 <!-- Carousel -->

@@ -20,8 +20,8 @@
     <header class="container-fluid">
       <div class="row d-flex justify-content-center d-flex align-items-end flex-wrap">
         <!-- Logo -->
-        <div class="col-12 col-lg-auto d-flex justify-content-between pb-3 pe-xl-5">
-          <img src="static/img/logo.png" alt="logo" class="logo ps-5 ps-lg-0"/>
+        <div class="col-12 pb-2 pe-4 pe-xl-5 col-lg-auto d-flex justify-content-between pb-3 pe-xl-5">
+          <img src="static/img/logo.png" alt="logo" class="logo ps-3 ps-lg-0 pt-lg-0"/>
         <!-- Logo -->
         <!-- Mobile Navbar -->
         <nav class="navbar navbar-expand-lg d-block d-lg-none" id="mobile-nav-bar">
@@ -35,26 +35,26 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                  <a class="nav-link active" aria-current="page" href="home.php">HOME</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">QUEM SOMOS</a>
-                </li>
-
-
-                <li class="nav-item">
-                  <a class="nav-link" href="#">SÓCIOS</a>
+                  <a class="nav-link" href="sobre.php">QUEM SOMOS</a>
                 </li>
 
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">NOTÍCIAS</a>
+                  <a class="nav-link" href="socios.php">SÓCIOS</a>
                 </li>
 
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">DESTAQUES</a>
+                  <a class="nav-link" href="noticias.php">NOTÍCIAS</a>
+                </li>
+
+
+                <li class="nav-item">
+                  <a class="nav-link" href="destaques.php">DESTAQUES</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -96,13 +96,11 @@
 
         <!-- Desktop Navbar  -->
         <nav class="col-auto d-flex justify-content-center align-items-center gap-3 d-none d-lg-flex" id="nav-top">
-          <a href="#">HOME</a>
-          <a href="#">QUEM SOMOS</a>
-          <a href="#">SÓCIOS</a>
-          <a href="#">NOTÍCIAS</a>
-          <a href="#">DESTAQUES</a>
-          <!--<a href="#">EMPREENDIMENTOS</a>-->
-
+          <a href="home.php">HOME</a>
+          <a href="sobre.php">QUEM SOMOS</a>
+          <a href="socios.php">SÓCIOS</a>
+          <a href="noticias.php">NOTÍCIAS</a>
+          <a href="destaques.php">DESTAQUES</a>
           <div class="dropdown">
             <a class="" href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               EMPREENDIMENTOS

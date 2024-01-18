@@ -48,14 +48,14 @@
 
           <div class="row mt-5">
               <nav class="col-11 text-end pe-5">
-                <a href="#">HOME</a>
-                <a href="#">QUEM SOMOS</a>
-                <a href="#">SÓCIOS</a>
-                <a href="#">NOTÍCIAS</a>
-                <a href="#">DESTAQUES</a>
-                <a href="#">EMPREENDIMENTOS</a>
-                <a href="#">CENTRO DE FÉRIAS</a>
-                <a href="#">CONTACTOS</a>
+                <a href="home.php">HOME</a>
+                <a href="sobre.php">QUEM SOMOS</a>
+                <a href="sobre.php">SÓCIOS</a>
+                <a href="noticias.php">NOTÍCIAS</a>
+                <a href="destaques.php">DESTAQUES</a>
+                <a href="empreendimentos.php">EMPREENDIMENTOS</a>
+                <a href="ferias.php">CENTRO DE FÉRIAS</a>
+                <a href="contactos.php">CONTACTOS</a>
               </nav>
           </div>
           <div class="copyright mt-5 offset-1 ">
