@@ -166,14 +166,17 @@ footer{
     max-width: 350px;
     max-height: 261px;
 }
+
 .customImg{
     width: 350px;
     height: 230px;
 }
+
 .cardTitle{
     width: 356px;
     height: 100px;
 }
+
 /*Main*/
 
 
@@ -197,6 +200,8 @@ footer{
     font-size: 43px;
     font-family: "Poppins Regular";
     text-align: center !important;
+    padding-top: 20px;
+    margin-bottom: 90px;
 }
 
 .bottom{
@@ -204,6 +209,7 @@ footer{
     background-image: url(img/FooterFacebook.png);
     background-size: cover;
     background-position: center;
+    width: 100%;
 }
 
 .bottom-shadow{
@@ -226,6 +232,10 @@ footer{
     font-family: "Poppins Regular";
     font-size: 29px;
     color: white;
+}
+
+.email{
+    white-space:    nowrap;
 }
 
 .contact-icon{
@@ -251,7 +261,7 @@ footer{
 }
 .contact-text{
     font-family: "Poppins Regular";
-    font-size: 23px;
+    font-size: 20px;
     color: white;
     margin-top: 20px;
 
@@ -260,15 +270,15 @@ footer{
 .whiteSpacer{
     height: 3px;
     width: 70px;
+    margin-top: 50px !important;
     background-color: white !important;
-
 }
 
 #contact-list{
     display: flex;
     justify-content: center;
     gap: 70px;
-    margin-top: 50px;
+    margin-top: -40px !important;
 }
 
 
@@ -452,7 +462,9 @@ footer{
     position: relative;
     top: 1px;
 }
-
+.bottom-icon a{
+    text-decoration: none;
+}
 
 
 /*Main*/
@@ -485,11 +497,11 @@ footer{
     color: #F99638 !important;
 }
 
-.bottom nav a:focus{
+.subnav nav a.active{
     color: #F99638 !important;
 }
 
-.copyright a span{
+.copyright a p{
     font-family: "Poppins Regular";
     font-size: 16px;
     color: white;
@@ -516,19 +528,44 @@ footer{
 @media all and (max-width: 1200px) {
     #nav-top a .dropdown{
         font-size: 12px;
+        transition-duration: 0.5s;
+
+    }
+
+    #nav-top a{
+        font-size: 10px;
+        transition-duration: 0.5s;
+
     }
 
     .logo{
-        height: 38px;
+        height: 34px;
         transition-duration: 0.5s;
     }
 
     .dropdown-menu .dropdown-item{
-        font-size: 12px;
+        font-size: 14px;
+        transition-duration: 0.5s;
+
     }
 
     #dropdown-menu-desktop a:hover, #dropdown-menu-desktop a.active{
         font-size: 14px !important;
+        transition-duration: 0.5s;
+
+
+    }
+
+    .subnav nav a{
+        font-size: 12px;
+        transition-duration: 0.5s;
+
+    
+    }
+    
+    .contact-text{
+        font-size: 16px !important;
+        transition-duration: 0.5s;
 
     }
 
@@ -544,8 +581,50 @@ footer{
     .title{
         font-size: 33px !important;
         line-height: 42px;
+        transition-duration: 0.5s;
+
     }
 
+    .subnav{
+        display: none;
+    }
+
+    .copyright a p{
+        text-align: center;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+
+    }
+
+    .copyright a p{
+        display: flex;
+        padding-bottom: -80px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .contact-text{
+        font-size: 14px !important;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom{
+        height: 500px;
+        animation-duration: 1s;
+        transition-duration: 0.5s;
+
+    
+    }
+
+    .myCustomCard img{
+        border: 1px solid #333333;
+        transition-duration: 0.5s;
+
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -558,19 +637,90 @@ footer{
     .carousel-indicators button{
         width: 35px !important;
         height: 7px !important;
+        transition-duration: 0.5s;
+
     }
 
     .title{
         font-size: 28px !important;
         line-height: 33px;
+        transition-duration: 0.5s;
+
     }
 
     .border-card h3{
         font-size: 22px;
+        transition-duration: 0.5s;
+
     }
 
     .border-card p{
         font-size: 15px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .contacts-shadow{
+        padding-top: 30px;
+        transition-duration: 0.5s;
+
+    }
+
+    .contact-icon img{
+        height: 40px;
+        width: 40px;
+        transition-duration: 0.5s;
+
+    }
+
+    contacts-title{
+        font-size: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .onebox{
+        margin-top: 40px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .whiteSpacer{
+        margin-top: 20px !important;
+        transition-duration: 0.5s;
+
+    
+    }
+
+
+
+    #contact-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom-icon img{
+        width: 70px;
+        height: 70px;
+        transition-duration: 0.5s;
+
+    }
+    
+    .bottom-text{
+        font-size: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom{
+        height: 480px;
+        transition-duration: 0.5s;
     }
 
 }
@@ -580,12 +730,24 @@ footer{
     .title{
         font-size: 23px !important;
         line-height: 28px;
+        transition-duration: 0.5s;
+
     }
 
     .border-card h3{
         font-size: 17px;
+        transition-duration: 0.5s;
+
     }
     .border-card p{
         font-size: 15px;
+        transition-duration: 0.5s;
+
     }
+
+    .copyright{
+        margin-left: none;
+    
+    }
+
 }
