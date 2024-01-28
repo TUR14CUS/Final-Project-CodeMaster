@@ -240,7 +240,7 @@
         </div>
       </div>
 
-      <div class="row mt-4 pt-2">
+      <div class="row mt-4 pt-2 pb-5">
         <div class="col-12 text-center">
           <a href="" class="seeMore1 d-flex justify-content-center align-items-center mx-auto">
             <span>VER MAIS</span>
@@ -489,39 +489,32 @@
         </div>
       </div>
     </div>
-    <div class="row mt-5">
-      <div class="col-12">
-        <div class="spacer mx-auto"></div>
-      </div>
-    </div>
     <main>
-      <footer class="container-fluid">
+      <footer class="container-fluid onebox">
         <!--Contacts-->
         <div class="row">
           <div class="col-12 p-0 contacts">
             <div class="contacts-shadow h-100">
               <div class="whiteSpacer mx-auto"></div>
-              <div class="contacts-title mt-4">Contactos</div>
+              <div class="contacts-title mt-4 mt-md-1">Contactos</div>
+              <div id="contact-list">
+                <div class=" contact-icon">
+                  <img src="static/img/buttons_icons/tel.svg" alt="" />
+                  <div class="contact-text">222 088 761</div>
+                </div>
 
-              <div id="contact-list"">
+                <div class="contact-icon">
+                  <img src="static/img/buttons_icons/loc.svg" alt="" />
+                  <div class="contact-text">Rua Passo Manuel, 59-1.º 4000-384 porto</div>
+                </div>
 
-          <div class=" contact-icon">
-                <img src="static/img/buttons_icons/tel.svg" alt="" />
-                <div class="contact-text">222 088 761</div>
-              </div>
-
-              <div class="contact-icon">
-                <img src="static/img/buttons_icons/loc.svg" alt="" />
-                <div class="contact-text">Rua Passo Manuel, 59-1.º 4000-384 porto</div>
-              </div>
-
-              <div class="contact-icon">
-                <img src="static/img/buttons_icons/mail.svg" alt="" />
-                <div class="contact-text">cooptripeira@mail.telepac.pt</div>
+                <div class="contact-icon">
+                  <img src="static/img/buttons_icons/mail.svg" alt="" />
+                  <div class="contact-text email">cooptripeira@mail.telepac.pt</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
         <!--Contacts-->
         <!--Map-->
@@ -540,14 +533,16 @@
             <div class="bottom-shadow h-100">
 
               <div class="bottom-icon mx-auto mt-5">
-                <img src="static/img/buttons_icons/facebook.svg" alt="" />
-                <div class="bottom-text mt-5">Siga-nos no Facebook</div>
+                <a href="">
+                  <img src="static/img/buttons_icons/facebook.svg" alt="" />
+                  <div class="bottom-text mt-5">Siga-nos no Facebook</div>
+                </a>
               </div>
               <div class="big-spacer"></div>
 
-              <div class="row mt-5">
+              <div class="subnav row mt-5">
                 <nav class="col-11 text-end pe-5">
-                  <a href="home.php">HOME</a>
+                  <a class="active" href="home.php">HOME</a>
                   <a href="sobre.php">QUEM SOMOS</a>
                   <a href="sobre.php">SÓCIOS</a>
                   <a href="noticias.php">NOTÍCIAS</a>
@@ -557,11 +552,11 @@
                   <a href="contactos.php">CONTACTOS</a>
                 </nav>
               </div>
-              <div class="copyright mt-5 offset-1 ">
+              <div class="copyright col-8 mx-auto text-start">
                 <a href="">
-                  <span class="ps-5">
+                  <p class="">
                     Copyright &copy; 2024 Grupo Mediamaster. Todos os direitos reservados.
-                  </span>
+                  </p>
                 </a>
               </div>
             </div>
