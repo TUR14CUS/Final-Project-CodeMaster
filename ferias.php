@@ -1,5 +1,5 @@
 <?php
-  include_once 'header.php';
+  include_once './templates/header.php';
   $pageTitle = "Centro de Férias";
 ?>
 
@@ -8,5 +8,5 @@
 <!-- The <main> of the page end here -->
 
 <?php
-  include_once 'footer.php';
+  include_once './templates/footer.php';
 ?>
