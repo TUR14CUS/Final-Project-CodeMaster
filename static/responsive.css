@@ -1,0 +1,227 @@
+/* Below we find the media */
+
+@media all and (max-width: 1200px) {
+    #nav-top a .dropdown{
+        font-size: 12px;
+        transition-duration: 0.5s;
+
+    }
+
+    #nav-top a{
+        font-size: 10px;
+        transition-duration: 0.5s;
+
+    }
+
+    .logo{
+        height: 34px;
+        transition-duration: 0.5s;
+    }
+
+    .dropdown-menu .dropdown-item{
+        font-size: 14px;
+        transition-duration: 0.5s;
+
+    }
+
+    #dropdown-menu-desktop a:hover, #dropdown-menu-desktop a.active{
+        font-size: 14px !important;
+        transition-duration: 0.5s;
+
+
+    }
+
+    .subnav nav a{
+        font-size: 12px;
+        transition-duration: 0.5s;
+
+
+    }
+
+    .contact-text{
+        font-size: 16px !important;
+        transition-duration: 0.5s;
+
+    }
+
+}
+
+@media all and (max-width: 992px) {
+
+    header{
+        margin-top: 40px;
+        transition-duration: 0.5s;
+    }
+
+    .title{
+        font-size: 33px !important;
+        line-height: 42px;
+        transition-duration: 0.5s;
+
+    }
+
+    .subnav{
+        display: none;
+    }
+
+    .copyright a p{
+        text-align: center;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+
+    }
+
+    .copyright a p{
+        display: flex;
+        padding-bottom: -80px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .contact-text{
+        font-size: 14px !important;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom{
+        height: 500px;
+        animation-duration: 1s;
+        transition-duration: 0.5s;
+
+
+    }
+
+    .myCustomCard img{
+        border: 1px solid #333333;
+        transition-duration: 0.5s;
+
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .logo{
+        height: 35px;
+        transition-duration: 0.5s;
+    }
+
+    .carousel-indicators button{
+        width: 35px !important;
+        height: 7px !important;
+        transition-duration: 0.5s;
+
+    }
+
+    .title{
+        font-size: 28px !important;
+        line-height: 33px;
+        transition-duration: 0.5s;
+
+    }
+
+    .border-card h3{
+        font-size: 22px;
+        transition-duration: 0.5s;
+
+    }
+
+    .border-card p{
+        font-size: 15px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .contacts-shadow{
+        padding-top: 30px;
+        transition-duration: 0.5s;
+
+    }
+
+    .contact-icon img{
+        height: 40px;
+        width: 40px;
+        transition-duration: 0.5s;
+
+    }
+
+    contacts-title{
+        font-size: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .onebox{
+        margin-top: 40px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .whiteSpacer{
+        margin-top: 20px !important;
+        transition-duration: 0.5s;
+
+
+    }
+
+
+
+    #contact-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom-icon img{
+        width: 70px;
+        height: 70px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom-text{
+        font-size: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom{
+        height: 480px;
+        transition-duration: 0.5s;
+    }
+
+}
+
+@media all and (max-width: 576px) {
+
+    .title{
+        font-size: 23px !important;
+        line-height: 28px;
+        transition-duration: 0.5s;
+
+    }
+
+    .border-card h3{
+        font-size: 17px;
+        transition-duration: 0.5s;
+
+    }
+    .border-card p{
+        font-size: 15px;
+        transition-duration: 0.5s;
+
+    }
+
+    .copyright{
+        margin-left: none;
+
+    }
+
