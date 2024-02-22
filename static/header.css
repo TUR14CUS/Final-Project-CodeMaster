@@ -156,3 +156,8 @@ header{
     color: white !important;
     border-bottom: none !important;
 }
+
+.mobile-nav-bar button svg{
+    width: 30px;
+    height: 30px;
+}
