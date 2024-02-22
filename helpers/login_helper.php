@@ -1,10 +1,10 @@
 <?php
 
 session_start();
-date_default_timezone_set("Europa/Lisbon");
+date_default_timezone_set("Europe/Lisbon");
 
 function doLogin($login, $senha){
-    $user = selectUnicSQL("SELECT * FROM _backoffice WHERE login = '$login' AND senha = '$senha'");
+    $user = selectUnicSQL("SELECT * FROM backoffice WHERE login = '$login' AND senha = '$senha'");
 
     
 
@@ -14,7 +14,7 @@ function doLogin($login, $senha){
 
         $id = $user['id'];
         $_SESSION['user'] == $user;
-        iduSQL("UPDATE _backoffice SET data_ultimo_acesso = '$data' WHERE id = $id");
+        iduSQL("UPDATE backoffice SET data_ultimo_acesso = '$data' WHERE id = $id");
         return true;
 
     }

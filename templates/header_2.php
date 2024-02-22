@@ -2,7 +2,7 @@
 
 require_once('requirements.php');
 
-$carousel = getBanner($actual_menu);
+/*$carousel = getCarouselID($id);*/
 
 $empreendimentos = getAllEmpreendimentosMenu();
 
@@ -17,13 +17,13 @@ $empreendimentos = getAllEmpreendimentosMenu();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CodeMaster Final Project">
   <meta name="author" content="Ricardo Santos">
-  <title> <?= $pageTitle; ?> </title>
-  <link rel="stylesheet" href="static/bootstrap.min.css">
-  <link rel="stylesheet" href="static/style.css">
-  <link rel="stylesheet" href="static/fonts/fontes.css">
-  <link rel="stylesheet" href="static/templates/header.css">
-  <link rel="stylesheet" href="static/templates/footer.css">
-  <link rel="stylesheet" href="static/templates/responsive.css">
+  <title> <?= $actual_menu; ?> </title>
+  <link rel="stylesheet" href="./static/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/fonts/fontes.css">
+  <link rel="stylesheet" href="./static/header.css">
+  <link rel="stylesheet" href="./static/footer.css">
+  <link rel="stylesheet" href="./static/responsive.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
@@ -82,7 +82,7 @@ $empreendimentos = getAllEmpreendimentosMenu();
                       </li>
 
                     <?php endforeach; ?>
-                    
+
                   </ul>
                 </li>
                 <li class="mobile-divider"></li>
@@ -101,8 +101,8 @@ $empreendimentos = getAllEmpreendimentosMenu();
       <!-- Mobile Navbar -->
       <!-- Desktop Navbar  -->
       <nav class="col-auto d-flex justify-content-center align-items-center gap-3 d-none d-lg-flex" id="nav-top">
-        <a href="home.php">HOME</a>
-        <a href="sobre.php">QUEM SOMOS</a>
+        <a href="index.php">HOME</a>
+        <a href="quem_somos.php">QUEM SOMOS</a>
         <a href="socios.php">SÓCIOS</a>
         <a href="noticias.php">NOTÍCIAS</a>
         <a href="destaques.php">DESTAQUES</a>
@@ -143,10 +143,8 @@ $empreendimentos = getAllEmpreendimentosMenu();
 
               <?php foreach ($carousel as $i => $c) : ?>
 
-                <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="10000">
-                  <img src="<?= $c['imagem']; ?>" class="d-block w-100" alt="..." />
-                  <div class="myShadow"></div>
-                </div>
+                <img src="<?= $c['imagem']; ?>" class="d-block w-100" alt="..." />
+                <div class="myShadow"></div>
 
               <?php endforeach; ?>
 

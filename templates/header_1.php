@@ -17,15 +17,14 @@ $empreendimentos = getAllEmpreendimentosMenu();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CodeMaster Final Project">
   <meta name="author" content="Ricardo Santos">
-  <title> <?= $pageTitle; ?> </title>
-  <link rel="stylesheet" href="static/bootstrap.min.css">
-  <link rel="stylesheet" href="static/style.css">
-  <link rel="stylesheet" href="static/fonts/fontes.css">
-  <link rel="stylesheet" href="static/templates/header.css">
-  <link rel="stylesheet" href="static/templates/footer.css">
-  <link rel="stylesheet" href="static/templates/responsive.css">
+  <title> <?= $actual_menu; ?> </title>
+  <link rel="stylesheet" href="./static/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/fonts/fontes.css">
+  <link rel="stylesheet" href="./static/header.css">
+  <link rel="stylesheet" href="./static/footer.css">
+  <link rel="stylesheet" href="./static/responsive.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 
 <body>
@@ -104,8 +103,8 @@ $empreendimentos = getAllEmpreendimentosMenu();
       <!-- Mobile Navbar -->
       <!-- Desktop Navbar  -->
       <nav class="col-auto d-flex justify-content-center align-items-center gap-3 d-none d-lg-flex" id="nav-top">
-        <a href="home.php">HOME</a>
-        <a href="sobre.php">QUEM SOMOS</a>
+        <a href="index.php">HOME</a>
+        <a href="quem_somos.php">QUEM SOMOS</a>
         <a href="socios.php">SÓCIOS</a>
         <a href="noticias.php">NOTÍCIAS</a>
         <a href="destaques.php">DESTAQUES</a>
@@ -131,13 +130,13 @@ $empreendimentos = getAllEmpreendimentosMenu();
 
           </ul>
         </div>
-        <a href="#">CENTRO DE FÉRIAS</a>
+        <a href="ferias.php">CENTRO DE FÉRIAS</a>
         <a href="#">CONTACTOS</a>
       </nav>
       <!-- Desktop Navbar  -->
       <!-- Carousel -->
       <div class="row">
-        <div class="col-12 p-0">
+        <div class="col-12 p-2">
           <div id="carouselExampleDark" class="carousel carousel-dark slide">
             <div class="carousel-indicators">
 

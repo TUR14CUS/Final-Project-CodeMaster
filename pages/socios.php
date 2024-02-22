@@ -1,12 +1,27 @@
 <?php
-  include_once './templates/header.php';
-  $pageTitle = "Sócios";
+
+$socios = getSocios();
+
 ?>
 
-<!-- The <main> of the page start here -->
+<main>
+    <div class="container-fluid">
 
-<!-- The <main> of the page end here -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="spacer mx-auto"></div>
+            </div>
+        </div>
+        <div class="row mt-5 pt-1">
+            <div class="col-12 text-center">
+                <h1 class="title"><?= $socios['titulo']; ?></h1>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-9 text mx-auto">
 
-<?php
-  include_once './templates/footer.php';
-?>
+                <?= $socios['texto']; ?>
+
+            </div>
+        </div>
+</main>

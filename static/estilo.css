@@ -1,0 +1,691 @@
+/*Footer*/
+
+footer{
+    margin-top: 125px;
+}
+
+.contacts{
+    height: 565px;
+    background-image: url(img/FooterContactos.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.contacts-shadow{
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 60px;
+}
+
+.contacts-title{
+    color: white;
+    font-size: 43px;
+    font-family: "Poppins Regular";
+    text-align: center !important;
+    padding-top: 20px;
+    margin-bottom: 90px;
+}
+
+.bottom{
+    height: 565px;
+    background-image: url(img/FooterFacebook.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.bottom-shadow{
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 70px;
+}
+
+.bottom-icon img{
+    width: 100px;
+    height: 100px;
+}
+
+.big-spacer{
+    background-color: white;
+    height: 2px;
+    margin-top: 65px;
+}
+
+.bottom-text{
+    font-family: "Poppins Regular";
+    font-size: 29px;
+    color: white;
+}
+
+.email{
+    white-space:    nowrap;
+}
+
+.contact-icon{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    text-align: center;
+    word-break: break-all;
+}
+.bottom-icon{
+    width: fit-content;
+    text-align: center;
+
+}
+.copyright{
+    font-family: "Poppins Light";
+    font-size: 14px;
+    color:white;
+    margin-top: 80px !important;
+    margin-left: 200px;
+}
+.contact-text{
+    font-family: "Poppins Regular";
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.whiteSpacer{
+    height: 3px;
+    width: 70px;
+    margin-top: 50px !important;
+    background-color: white !important;
+}
+
+#contact-list{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: -40px !important;
+}
+
+.contacts .whiteSpacer{
+    margin-top: 60px;
+}
+
+.bottom nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 125px !important;
+}
+
+.bottom nav a{
+ font-family: "Poppins Regular";
+ font-size: 15px;
+ color: white;
+ text-transform: uppercase;
+ text-decoration: none;
+}
+
+.bottom nav a:hover{
+    color: #F99638 !important;
+}
+
+.subnav nav a.active{
+    color: #F99638 !important;
+}
+
+.copyright a p{
+    font-family: "Poppins Regular";
+    font-size: 16px;
+    color: white;
+}
+
+.copyright a{
+    text-decoration: none;
+}
+
+.contact-icon img{
+    width: 75px;
+    height: 85px;
+}
+
+/* Below we find the fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins/Poppins-Regular.ttf') format('truetype'),
+         url('fonts/Poppins/Poppins-Light.ttf') format('truetype'),
+         url('fonts/Poppins/Poppins-Bold.ttf') format('truetype'),
+         url('fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+/*Header*/
+body{
+    min-width: 360px;
+    margin: auto;
+}
+
+header{
+    margin-top: 60px;
+}
+
+.logo{
+    height: 49px;
+}
+
+.dropdown-divider{
+    background-color: rgb(115, 115, 115);
+    color: rgb(115, 115, 115);
+    border-color: rgb(115, 115, 115) !important;
+    border-width: 3px;
+
+}
+
+.mobile-divider{
+    background-color: rgb(115, 115, 115);
+    color: rgb(115, 115, 115);
+    border-color: rgb(115, 115, 115) !important;
+    border-width: 1px;
+    height: 1px;
+
+}
+
+.dropdown-menu{
+  background-color: #333333;
+  opacity: 95%;
+  border-radius: 0px;
+  width: 240px;
+}
+
+.navbar-toggler{
+    border: none !important;
+}
+
+#dropdown-menu-mobile{
+    background-color: white !important;
+    opacity: 100%;
+    width: 100%;
+}
+
+#nav-top{
+    font-family: "Poppins medium";
+    color: #333333;
+    height: 55px;
+}
+
+.dropdown-menu a{
+    color: white !important;
+    border-bottom: none !important;
+    font-family: "Poppins Regular" !important;
+    padding: 10px 20px !important;
+
+}
+
+#dropdown-menu-desktop a:hover, #dropdown-menu-desktop a.active{
+    font-size: 17px !important;
+    border-bottom: none !important;
+    background-color: transparent !important;;
+    font-family: "Poppins Bold" !important;
+}
+
+.dropdown-menu a:hover{
+    font-size: 17px !important;
+    border-bottom: none !important;
+    background-color: transparent !important;;
+    font-family: "Poppins Bold" !important;
+}
+
+#nav-top a, #nav-top .dropdown{
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 6px solid white;
+    transition-duration: 0.3s;
+}
+
+#nav-top .dropdown{
+    border-bottom: none;
+}
+
+#nav-top a:hover, #nav-top a.active{
+    border-bottom: 6px solid #333333;
+
+}
+
+.nav-item > a{
+    font-family: "Poppins Regular";
+    font-size: 13px;
+    color: white !important;
+    border-bottom: none !important;
+    padding: 10px 20px !important;
+}
+
+#mobile-nav-bar .navbar-nav{
+    background-color: rgba(50, 50, 50, 0.95);
+}
+
+#dropdown-menu-mobile .dropdown-divider{
+    border-width: 1px;
+    margin: 0px 60px;
+}
+
+#dropdown-menu-mobile .dropdown-item:hover,#dropdown-menu-mobile .dropdown-item.active{
+    background-color: transparent !important;
+    color: #F99638 !important;
+    opacity: 100%  !important;
+    font-family: 'Poppins Regular';
+}
+
+#dropdown-menu-mobile .dropdown-item{
+    color: #333333 !important;
+    opacity: 100%  !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Poppins Regular";
+    padding-left: 60px !important;
+    padding-right: 60px;
+}
+
+#mobile-nav-bar .navbar-nav{
+    background-color: #333333;
+    width: 100vw;
+    position: absolute;
+    right: -24.2px;
+    z-index: 50;
+}
+
+.dropdown-menu .dropdown-item{
+    white-space: normal;
+    font-family: 'Poppins Regular';
+    font-size: 14px;
+    color: white !important;
+    border-bottom: none !important;
+}
+
+.mobile-nav-bar button svg{
+    width: 30px;
+    height: 30px;
+}
+
+/* Below we find the elements */
+
+
+
+
+
+/* Below we find the class */
+
+.myShadow{
+    height: 100px;
+    position: absolute !important;
+    z-index: 20 !important;
+    width: 100%;
+    box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.75);
+    top: -100px;
+}
+
+.spacer{
+    height: 3px;
+    width: 70px;
+    background-color: #F99638 !important;
+
+}
+
+.title{
+    font-family: "Poppins regular";
+    font-size: 38px;
+    line-height: 1.5em;
+}
+
+.text{
+    font-family: "popins light";
+    font-size: 18px;
+    color:#333333;
+}
+
+.seeMore1{
+    background-image: url(img/buttons_icons/VerMais1.svg);
+    width: 194px;
+    height: 48px;
+    display: inline-block;
+    background-size: 100% 100%;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-family: "Poppins Regular";
+    color: #333333;
+}
+
+.seeMore1:hover{
+    background-image: url(img/buttons_icons/VerMais1Hover.svg);
+    color: white;
+}
+
+.seeMore2{
+    background-image: url(img/buttons_icons/VerMais2.svg);
+    width: 128px;
+    height: 35px;
+    display: inline-block;
+    background-size: 100% 100%;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-family: "Poppins Regular";
+    color: #333333;
+
+}
+
+.seeMore2:hover{
+    background-image: url(img/buttons_icons/VerMais2Hover.svg);
+    color: white;
+}
+
+.myCustomCard{
+    width: 350px;
+    height: 473px;
+}
+
+.border-card{
+    border: 1px solid #333333;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 261px;
+    max-width: 350px;
+    max-height: 261px;
+}
+
+.customImg{
+    width: 350px;
+    height: 230px;
+}
+
+.cardTitle{
+    width: 356px;
+    height: 100px;
+}
+
+/*Main*/
+
+/* Below we find the id*/
+
+
+/* Below we find the parenting links */
+
+.carousel img{
+    height: 30vw;
+    position:  relative !important;
+}
+
+.carousel-indicators button{
+    width: 71px !important;
+    height: 13px !important;
+    background-color: #FFFFFFFF !important;
+    opacity: 1 !important;
+}
+
+.carousel-indicators button.active{
+    background-color: #F99638 !important;
+}
+
+.myCustomCard h3{
+    font-family: "Poppins Regular";
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.myCustomCard p{
+    font-family: "Poppins Light";
+    font-size: 18px;
+}
+
+.myCustomCard .seeMore2{
+    position: relative;
+    top: 17px;
+}
+
+.border-card .btnSeeMore{
+    align-self: flex-end !important;
+    width: 100%;
+    position: relative;
+    top: 1px;
+}
+.bottom-icon a{
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+
+
+
+/* Below we find the media */
+
+@media all and (max-width: 1200px) {
+    #nav-top a .dropdown{
+        font-size: 12px;
+        transition-duration: 0.5s;
+
+    }
+
+    #nav-top a{
+        font-size: 10px;
+        transition-duration: 0.5s;
+
+    }
+
+    .logo{
+        height: 34px;
+        transition-duration: 0.5s;
+    }
+
+    .dropdown-menu .dropdown-item{
+        font-size: 14px;
+        transition-duration: 0.5s;
+
+    }
+
+    #dropdown-menu-desktop a:hover, #dropdown-menu-desktop a.active{
+        font-size: 14px !important;
+        transition-duration: 0.5s;
+
+
+    }
+
+    .subnav nav a{
+        font-size: 12px;
+        transition-duration: 0.5s;
+
+
+    }
+
+    .contact-text{
+        font-size: 16px !important;
+        transition-duration: 0.5s;
+
+    }
+
+}
+
+@media all and (max-width: 992px) {
+
+    header{
+        margin-top: 40px;
+        transition-duration: 0.5s;
+    }
+
+    .title{
+        font-size: 33px !important;
+        line-height: 42px;
+        transition-duration: 0.5s;
+
+    }
+
+    .subnav{
+        display: none;
+    }
+
+    .copyright a p{
+        text-align: center;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+
+    }
+
+    .copyright a p{
+        display: flex;
+        padding-bottom: -80px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .contact-text{
+        font-size: 14px !important;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom{
+        height: 500px;
+        animation-duration: 1s;
+        transition-duration: 0.5s;
+
+
+    }
+
+    .myCustomCard img{
+        border: 1px solid #333333;
+        transition-duration: 0.5s;
+
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .logo{
+        height: 35px;
+        transition-duration: 0.5s;
+    }
+
+    .carousel-indicators button{
+        width: 35px !important;
+        height: 7px !important;
+        transition-duration: 0.5s;
+
+    }
+
+    .title{
+        font-size: 28px !important;
+        line-height: 33px;
+        transition-duration: 0.5s;
+
+    }
+
+    .border-card h3{
+        font-size: 22px;
+        transition-duration: 0.5s;
+
+    }
+
+    .border-card p{
+        font-size: 15px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .contacts-shadow{
+        padding-top: 30px;
+        transition-duration: 0.5s;
+
+    }
+
+    .contact-icon img{
+        height: 40px;
+        width: 40px;
+        transition-duration: 0.5s;
+
+    }
+
+    contacts-title{
+        font-size: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .onebox{
+        margin-top: 40px;
+        transition-duration: 0.5s;
+
+    }
+
+
+    .whiteSpacer{
+        margin-top: 20px !important;
+        transition-duration: 0.5s;
+
+
+    }
+
+
+
+    #contact-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom-icon img{
+        width: 70px;
+        height: 70px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom-text{
+        font-size: 20px;
+        transition-duration: 0.5s;
+
+    }
+
+    .bottom{
+        height: 480px;
+        transition-duration: 0.5s;
+    }
+
+}
+
+@media all and (max-width: 576px) {
+
+    .title{
+        font-size: 23px !important;
+        line-height: 28px;
+        transition-duration: 0.5s;
+
+    }
+
+    .border-card h3{
+        font-size: 17px;
+        transition-duration: 0.5s;
+
+    }
+    .border-card p{
+        font-size: 15px;
+        transition-duration: 0.5s;
+
+    }
+
+    .copyright{
+        margin-left: none;
+
+    }
+}

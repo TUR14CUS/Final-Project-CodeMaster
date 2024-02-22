@@ -1,12 +1,27 @@
 <?php
-  include_once './templates/header.php';
-  $pageTitle = "Centro de Férias";
+
+$ferias = getFerias();
+
 ?>
 
-<!-- The <main> of the page start here -->
+<main>
+    <div class="container-fluid">
 
-<!-- The <main> of the page end here -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="spacer mx-auto"></div>
+            </div>
+        </div>
+        <div class="row mt-5 pt-1">
+            <div class="col-12 text-center">
+                <h1 class="title"><?= $ferias['titulo']; ?></h1>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-9 text mx-auto">
 
-<?php
-  include_once './templates/footer.php';
-?>
+                <?= $ferias['texto']; ?>
+
+            </div>
+        </div>
+</main>
