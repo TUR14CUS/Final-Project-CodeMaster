@@ -38,8 +38,11 @@ $empreendimentos = getAllEmpreendimentosMenu();
         <!-- Mobile Navbar -->
         <nav class="navbar navbar-expand-lg d-block d-lg-none" id="mobile-nav-bar">
           <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button onclick="menuMobile()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon" id="closed-menu"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" id="opened-menu" width="16" height="16" fill="currentColor" class="bi bi-x-lg d-none" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+              </svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -82,7 +85,7 @@ $empreendimentos = getAllEmpreendimentosMenu();
                       </li>
 
                     <?php endforeach; ?>
-                    
+
                   </ul>
                 </li>
                 <li class="mobile-divider"></li>

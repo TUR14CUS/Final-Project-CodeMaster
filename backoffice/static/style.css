@@ -21,3 +21,11 @@ input[type="text"]{
 
 }
 
+#login input{
+    text-align: center;
+    width: 400px;
+}
+
+#login input[type="submit"]{
+    width: auto;
+}
