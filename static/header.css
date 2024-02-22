@@ -102,7 +102,7 @@ header{
     border-bottom: none;
 }
 
-#nav-top a:hover{
+#nav-top a:hover, #nav-top a.active{
     border-bottom: 6px solid #333333;
 
 }

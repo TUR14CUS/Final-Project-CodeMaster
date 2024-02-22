@@ -1,4 +1,10 @@
-        <footer class="container-fluid onebox">
+<?php
+
+$contctos = getAllContacts();
+
+?>
+
+<footer class="container-fluid onebox">
           <!--Contacts-->
           <div class="row">
             <div class="col-12 p-0 contacts">
@@ -8,15 +14,15 @@
                 <div id="contact-list">
                   <div class=" contact-icon">
                     <img src="static/img/buttons_icons/tel.svg" alt="" />
-                    <div class="contact-text">222 088 761</div>
+                    <div class="contact-text"><?= $contactos['telefone'];?></div>
                   </div>
                   <div class="contact-icon">
                     <img src="static/img/buttons_icons/loc.svg" alt="" />
-                    <div class="contact-text">Rua Passo Manuel, 59-1.º 4000-384 porto</div>
+                    <div class="contact-text"><?= $contactos['morada'];?></div>
                   </div>
                   <div class="contact-icon">
                     <img src="static/img/buttons_icons/mail.svg" alt="" />
-                    <div class="contact-text email">cooptripeira@mail.telepac.pt</div>
+                    <div class="contact-text email"><?= $contactos['email'];?></div>
                   </div>
                 </div>
               </div>
@@ -49,7 +55,7 @@
                 <div class="big-spacer"></div>
                 <div class="subnav row mt-5">
                   <nav class="col-11 text-end pe-5">
-                    <a class="active" href="home.php">HOME</a>
+                    <a class="<?= ($actual_menu == 'home') ? 'active' : '' ?>" href="home.php">HOME</a>
                     <a href="sobre.php">QUEM SOMOS</a>
                     <a href="sobre.php">SÓCIOS</a>
                     <a href="noticias.php">NOTÍCIAS</a>
@@ -60,8 +66,8 @@
                   </nav>
                 </div>
                 <div class="copyright col-8 mx-auto text-start">
-                  <a href="">
-                    <p class=""> Copyright &copy; 2024 Grupo Mediamaster. Todos os direitos reservados. </p>
+                  <a href="<?= $contactos['facebook'];?>">
+                    <p class=""> Copyright &copy; <?php date('Y'); ?> Grupo Mediamaster. Todos os direitos reservados. </p>
                   </a>
                 </div>
               </div>
@@ -69,6 +75,6 @@
           </div>
           <!--Bottom-->
         </footer>
-        <script src="static/bootstrap.min.js"></script>
+        <script src="./static/bootstrap.min.js"></script>
   </body>
 </html>
