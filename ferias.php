@@ -1,12 +1,9 @@
 <?php
-  include_once './templates/header.php';
-  $pageTitle = "Centro de Férias";
-?>
 
-<!-- The <main> of the page start here -->
+$actual_menu = 'Centro de Férias';
 
-<!-- The <main> of the page end here -->
+require('templates/header_2.php');
 
-<?php
-  include_once './templates/footer.php';
-?>
+require('pages/ferias.php');
+
+require('templates/footer.php');

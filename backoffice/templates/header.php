@@ -1,13 +1,14 @@
 <?php
 
-require_once('./requirements.php');
+require_once('../requirements.php');
 
-if(!isLogged){
+
+if (!isLogged()) {
     header('Location: index.php');
     exit;
-}else{
+} else {
     $user = $_SESSION['user'];
-}
+};
 
 ?>
 

@@ -1,13 +1,9 @@
 <?php
-  include_once './templates/header.php';
-  $pageTitle = "Contactos";
-  
-?>
 
-<!-- The <main> of the page start here -->
+$actual_menu = 'Contactos';
 
-<!-- The <main> of the page end here -->
+require('templates/header_2.php');
 
-<?php
-  include_once './templates/footer.php';
-?>
+require('pages/contactos.php');
+
+require('templates/footer.php');

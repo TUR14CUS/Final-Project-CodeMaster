@@ -1,12 +1,9 @@
 <?php
-  include_once './templates/header.php';
-  $pageTitle = "Destaques";
-?>
 
-<!-- The <main> of the page start here -->
+$actual_menu = 'Destaques';
 
-<!-- The <main> of the page end here -->
+require('templates/header_2.php');
 
-<?php
-  include_once './templates/footer.php';
-?>
+require('pages/destaques.php');
+
+require('templates/footer.php');

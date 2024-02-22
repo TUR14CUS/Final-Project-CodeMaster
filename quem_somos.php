@@ -1,12 +1,9 @@
 <?php
 
-$actual_menu = 'quem_somos';
+$actual_menu = 'Quem Somos';
 
-require('templates/header.php');
+require('templates/header_1.php');
 
-require('pages/sobre.php');
+require('pages/quem_somos.php');
 
 require('templates/footer.php');
-
-
-?>
