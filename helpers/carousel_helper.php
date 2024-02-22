@@ -5,4 +5,9 @@ function getAllCarousel(){
     return $result;
 }
 
+function getCarouselID($id){
+    $result = selectUnicSQL("SELECT * FROM carousel WHERE id = $id");
+    return $result;
+}
+
 ?>

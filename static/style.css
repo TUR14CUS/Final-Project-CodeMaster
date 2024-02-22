@@ -144,4 +144,8 @@
     text-decoration: none;
 }
 
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-size: 25px;
 }

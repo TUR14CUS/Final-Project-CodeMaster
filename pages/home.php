@@ -2,7 +2,7 @@
 require("./templates/header.php");
 
 $texto_quem_somos = getMinTextQuemSomos();
-$destaques = getAllDestaques();
+$destaques = getAllDestaquesHome();
 
 ?>
     <main>
@@ -89,8 +89,4 @@ $destaques = getAllDestaques();
         </div>
       </div>
       <main>
-
-<?php
-include_once("./templates/footer.php");
-?>
 

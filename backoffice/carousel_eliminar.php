@@ -8,4 +8,6 @@ if($form){
     iduSQL("DELETE FROM carousel WHERE id = $eliminar");
 }
 
+header('Location: carousel.php');
+
 ?>

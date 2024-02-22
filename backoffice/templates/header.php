@@ -15,6 +15,8 @@ require_once('./requirements.php');
     <title> Backoffice </title>
     <link rel="stylesheet" href="static/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="static/style.css">
 
 </head>
 
@@ -35,22 +37,19 @@ require_once('./requirements.php');
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="home.php">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Carousel</a>
+                                    <a class="nav-link active" aria-current="page" href="carousel.php">Carousel</a>
                                 </li>
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+                               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menu Simples
                                 </a>
-                                <!--<ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul> -->
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="menu_simples.php?id=1">Quem Somos</a></li>
+                                    <li><a class="dropdown-item" href="menu_simples.php?id=2">Sócios</a></li>
+                                    <li><a class="dropdown-item" href="menu_simples.php?id=3">Centro de Férias</a></li>
+                                </ul>
                                 </li>
                             </ul>
                         </div>
