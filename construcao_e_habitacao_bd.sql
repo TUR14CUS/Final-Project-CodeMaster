@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 22-Fev-2024 às 17:41
+-- Tempo de geração: 22-Fev-2024 às 20:06
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `construcao_e_habitacao_bd`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `backoffice`
+--
+
+CREATE TABLE `backoffice` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `login` varchar(50) NOT NULL,
+  `senha` varchar(50) NOT NULL,
+  `data_ultimo_acesso` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `backoffice`
+--
+
+INSERT INTO `backoffice` (`id`, `nome`, `login`, `senha`, `data_ultimo_acesso`) VALUES
+(1, 'Admin', 'admin', 'codemaster', '');
 
 -- --------------------------------------------------------
 
@@ -91,20 +112,21 @@ CREATE TABLE `destaques` (
   `id` int(11) NOT NULL,
   `imagem` varchar(1000) NOT NULL,
   `titulo` varchar(50) NOT NULL,
-  `texto` longtext NOT NULL
+  `texto` longtext NOT NULL,
+  `esta_na_home` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `destaques`
 --
 
-INSERT INTO `destaques` (`id`, `imagem`, `titulo`, `texto`) VALUES
-(1, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque1.png', 'Canidelo - Vila Nova de Gaia', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore'),
-(2, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque2.png', 'Barralha - Sº da Hora Matosinhos', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore'),
-(3, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque3.png', 'Contomil - Porto', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore'),
-(4, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque4.png', 'Vila do Conde', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore'),
-(5, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque5.png', 'Famalição', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore'),
-(6, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque6.png', 'Madalena - Vila Nova de Gaia', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... loreBarralha - Sº da Hora Matosinhos');
+INSERT INTO `destaques` (`id`, `imagem`, `titulo`, `texto`, `esta_na_home`) VALUES
+(1, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque1.png', 'Canidelo - Vila Nova de Gaia', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore', 1),
+(2, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque2.png', 'Barralha - Sº da Hora Matosinhos', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore', 1),
+(3, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque3.png', 'Contomil - Porto', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore', 1),
+(4, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque4.png', 'Vila do Conde', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore', 1),
+(5, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque5.png', 'Famalição', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... lore', 1),
+(6, 'http://127.0.0.1/construcao_e_habitacao/static/img/destaque6.png', 'Madalena - Vila Nova de Gaia', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sed dolore deleniti, aut quidem, adipisci aspernatur nisi... loreBarralha - Sº da Hora Matosinhos', 1);
 
 -- --------------------------------------------------------
 
@@ -156,6 +178,12 @@ INSERT INTO `menu_simples` (`id`, `titulo`, `texto`) VALUES
 --
 
 --
+-- Índices para tabela `backoffice`
+--
+ALTER TABLE `backoffice`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `banner`
 --
 ALTER TABLE `banner`
@@ -195,6 +223,12 @@ ALTER TABLE `menu_simples`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `backoffice`
+--
+ALTER TABLE `backoffice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `banner`
