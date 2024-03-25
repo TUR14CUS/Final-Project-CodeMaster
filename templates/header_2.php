@@ -2,8 +2,8 @@
 
 require_once('requirements.php');
 
-/*$carousel = getCarouselID($id);*/
 
+$carousel = getCarouselID(1);
 $empreendimentos = getAllEmpreendimentosMenu();
 
 
@@ -19,11 +19,8 @@ $empreendimentos = getAllEmpreendimentosMenu();
   <meta name="author" content="Ricardo Santos">
   <title> <?= $actual_menu; ?> </title>
   <link rel="stylesheet" href="./static/bootstrap.min.css">
-  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/estilo.css">
   <link rel="stylesheet" href="./static/fonts/fontes.css">
-  <link rel="stylesheet" href="./static/header.css">
-  <link rel="stylesheet" href="./static/footer.css">
-  <link rel="stylesheet" href="./static/responsive.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
@@ -87,7 +84,7 @@ $empreendimentos = getAllEmpreendimentosMenu();
                 </li>
                 <li class="mobile-divider"></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">CENTRO DE FÉRIAS</a>
+                  <a class="nav-link" href="ferias.php">CENTRO DE FÉRIAS</a>
                 </li>
                 <li class="mobile-divider"></li>
                 <li class="nav-item">
@@ -128,30 +125,24 @@ $empreendimentos = getAllEmpreendimentosMenu();
 
           </ul>
         </div>
-        <a href="#">CENTRO DE FÉRIAS</a>
-        <a href="#">CONTACTOS</a>
+        <a href="ferias.php">CENTRO DE FÉRIAS</a>
+        <a href="contactos.php">CONTACTOS</a>
       </nav>
       <!-- Desktop Navbar  -->
       <!-- Carousel -->
-      <div class="row">
 
-        <div class="col-12 p-0">
 
-          <div id="carouselExampleDark" class="carousel carousel-dark slide">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" style="  padding-right: calc(var(--bs-gutter-x) * .0);
+  padding-left: calc(var(--bs-gutter-x) * .0);">
 
-            <div class="carousel-inner">
+        <div class="carousel-inner">
 
-              <?php foreach ($carousel as $i => $c) : ?>
+          <img src="<?= getImagemByPagina(); ?>" class="d-block w-100" alt="..." />
+          <div class="myShadow"></div>
 
-                <img src="<?= $c['imagem']; ?>" class="d-block w-100" alt="..." />
-                <div class="myShadow"></div>
-
-              <?php endforeach; ?>
-
-            </div>
-          </div>
         </div>
+        <!-- Carousel -->
       </div>
-      <!-- Carousel -->
     </div>
+
   </header>

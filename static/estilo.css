@@ -1,151 +1,3 @@
-/*Footer*/
-
-footer{
-    margin-top: 125px;
-}
-
-.contacts{
-    height: 565px;
-    background-image: url(img/FooterContactos.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.contacts-shadow{
-    background-color: rgba(0,0,0,0.6);
-    padding-top: 60px;
-}
-
-.contacts-title{
-    color: white;
-    font-size: 43px;
-    font-family: "Poppins Regular";
-    text-align: center !important;
-    padding-top: 20px;
-    margin-bottom: 90px;
-}
-
-.bottom{
-    height: 565px;
-    background-image: url(img/FooterFacebook.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-}
-
-.bottom-shadow{
-    background-color: rgba(0,0,0,0.6);
-    padding-top: 70px;
-}
-
-.bottom-icon img{
-    width: 100px;
-    height: 100px;
-}
-
-.big-spacer{
-    background-color: white;
-    height: 2px;
-    margin-top: 65px;
-}
-
-.bottom-text{
-    font-family: "Poppins Regular";
-    font-size: 29px;
-    color: white;
-}
-
-.email{
-    white-space:    nowrap;
-}
-
-.contact-icon{
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    text-align: center;
-    word-break: break-all;
-}
-.bottom-icon{
-    width: fit-content;
-    text-align: center;
-
-}
-.copyright{
-    font-family: "Poppins Light";
-    font-size: 14px;
-    color:white;
-    margin-top: 80px !important;
-    margin-left: 200px;
-}
-.contact-text{
-    font-family: "Poppins Regular";
-    font-size: 20px;
-    color: white;
-    margin-top: 20px;
-
-}
-
-.whiteSpacer{
-    height: 3px;
-    width: 70px;
-    margin-top: 50px !important;
-    background-color: white !important;
-}
-
-#contact-list{
-    display: flex;
-    justify-content: center;
-    gap: 70px;
-    margin-top: -40px !important;
-}
-
-.contacts .whiteSpacer{
-    margin-top: 60px;
-}
-
-.bottom nav{
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    padding-right: 125px !important;
-}
-
-.bottom nav a{
- font-family: "Poppins Regular";
- font-size: 15px;
- color: white;
- text-transform: uppercase;
- text-decoration: none;
-}
-
-.bottom nav a:hover{
-    color: #F99638 !important;
-}
-
-.subnav nav a.active{
-    color: #F99638 !important;
-}
-
-.copyright a p{
-    font-family: "Poppins Regular";
-    font-size: 16px;
-    color: white;
-}
-
-.copyright a{
-    text-decoration: none;
-}
-
-.contact-icon img{
-    width: 75px;
-    height: 85px;
-}
-
-/* Below we find the fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 @font-face {
@@ -156,10 +8,21 @@ footer{
          url('fonts/Poppins/Poppins-Medium.ttf') format('truetype');
 }
 
-/*Header*/
 body{
     min-width: 360px;
     margin: auto;
+	overflow-x: hidden;
+
+    
+}
+
+p{
+		font-family: "Arial";
+}
+
+
+.paddingmenus{
+	padding-top: 184px;
 }
 
 header{
@@ -186,6 +49,7 @@ header{
     height: 1px;
 
 }
+
 
 .dropdown-menu{
   background-color: #333333;
@@ -308,14 +172,6 @@ header{
     height: 30px;
 }
 
-/* Below we find the elements */
-
-
-
-
-
-/* Below we find the class */
-
 .myShadow{
     height: 100px;
     position: absolute !important;
@@ -384,15 +240,17 @@ header{
     height: 473px;
 }
 
-.border-card{
-    border: 1px solid #333333;
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-    width: 350px;
-    height: 261px;
-    max-width: 350px;
-    max-height: 261px;
+.myCustomCard-N{
+    width: 540px;
+    height: 473px;
+    padding-bottom: 440px !important;
+}
+
+.paginacao{
+    margin-bottom: 1000px !important;
+}
+#teste{
+    padding-bottom: 300px;
 }
 
 .customImg{
@@ -405,12 +263,17 @@ header{
     height: 100px;
 }
 
-/*Main*/
+.botoesPaginas{
+	
+	padding-left: 10px;
+}
 
-/* Below we find the id*/
 
 
-/* Below we find the parenting links */
+a .cardTitle{
+    width: 356px;
+    height: 100px;
+}
 
 .carousel img{
     height: 30vw;
@@ -455,12 +318,202 @@ header{
 }
 
 table, th, td {
-    border: 2px solid black;
+    
     border-collapse: collapse;
     font-size: 25px;
 }
 
+.tabelax {
+border-collapse: collapse;
+border: none;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
 
+.imagemx {
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*Footer*/
+
+footer{
+    margin-top: 125px;
+}
+
+.contacts{
+    height: 565px;
+    background-image: url(img/FooterContactos.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.contacts-shadow{
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 60px;
+}
+
+.contacts-title{
+    color: white;
+    font-size: 43px;
+    font-family: "Poppins Regular";
+    text-align: center !important;
+    padding-top: 20px;
+    margin-bottom: 90px;
+}
+
+.bottom{
+    height: 565px;
+    background-image: url(img/FooterFacebook.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.bottom-shadow{
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 70px;
+}
+
+.bottom-icon img{
+    width: 100px;
+    height: 100px;
+}
+
+.big-spacer{
+    background-color: white;
+    height: 2px;
+    margin-top: 65px;
+}
+
+.bottom-text{
+    font-family: "Poppins Regular";
+    font-size: 29px;
+    color: white;
+}
+
+.email{
+    white-space:    nowrap;
+}
+
+.contact-icon{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    text-align: center;
+    word-break: break-all;
+}
+.bottom-icon{
+    width: fit-content;
+    text-align: center;
+
+}
+.copyright{
+    font-family: "Poppins Light";
+    font-size: 14px;
+    color:white;
+    margin-top: 80px !important;
+    margin-left: 200px;
+}
+.contact-text{
+    font-family: "Poppins Regular";
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.whiteSpacer{
+    height: 3px;
+    width: 70px;
+    margin-top: 50px !important;
+    background-color: white !important;
+}
+
+#contact-list{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: -40px !important;
+}
+
+.contacts .whiteSpacer{
+    margin-top: 60px;
+}
+
+.bottom nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 125px !important;
+}
+
+#noticias{
+    text-decoration: none;
+    color: black;
+}
+
+.border-card-n{
+    border: 1px solid #333333;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 540px;
+    height: 363px;
+    padding-bottom: 300px;
+}
+
+main{
+    
+}
+.border-card{
+    border: 1px solid #333333;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 261px;
+    max-width: 350px;
+    max-height: 261px;
+}
+
+.bottom nav a{
+ font-family: "Poppins Regular";
+ font-size: 15px;
+ color: white;
+ text-transform: uppercase;
+ text-decoration: none;
+}
+
+.bottom nav a:hover{
+    color: #F99638 !important;
+}
+
+.subnav nav a.active{
+    color: #F99638 !important;
+}
+
+.copyright a p{
+    font-family: "Poppins Regular";
+    font-size: 16px;
+    color: white;
+}
+
+.copyright a{
+    text-decoration: none;
+}
+
+.contact-icon img{
+    width: 75px;
+    height: 85px;
+}
 
 /* Below we find the media */
 

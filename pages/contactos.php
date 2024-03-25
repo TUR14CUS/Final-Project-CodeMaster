@@ -1,63 +1,102 @@
 <?php
 
-require_once("base_dados.php");
-require_once("helpers/carousel_helper.php");
-
-$carousel = getAllCarousel();
-
-
-$form = isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["mensagem"]);
-
-if ($form) {
-
-    $email_formulario = "fosege5681@ricorit.com";
-
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $mensagem = "
-        <ul>
-            <li>Nome: ($nome)</li>
-            <li>E-mail: ($email)</li>
-            <li>Mensagem: $_POST[mensagem]</li>
-        </ul>
-    ";
-
-    $headers = "MIME-Version: 1.0\r\nContent-type:text/html;charset=UTF-8\r\n";
-
-    if (empty($_POST["receber_copia"])) {
-        mail($email_formulario, "Contacto do Site", $mensagem, $headers);
-    } else {
-        mail("$email_formulario, $email", "Contacto do Site", $mensagem, $headers);
-    }
-
-    header("Location: index.php");
+function getcontactos()
+{
+    $result = selectUnicSQL("SELECT * FROM contactos");
+    return $result;
 }
+
+$contactos = getcontactos();
 
 ?>
 
-    <div class="main container-fluid my-5">
+<head>
+    <style>
+        .titulo_a {
 
-        <div class="row">
-            <div class="col-12 text-center">
+            font-size: 35px;
+            font-weight: bold;
+        }
 
-                <form action="" method="POST">
+        .titulo_b {
 
-                    <input type="text" name="nome" placeholder="Nome" required autofocus>
-                    <br><br>
-                    <input type="email" name="email" placeholder="E-mail" required>
-                    <br><br>
-                    <textarea name="mensagem" cols="80" rows="7" placeholder="Mensagem" required></textarea>
-                    <br><br>
-                    <input type="checkbox" name="receber_copia" id="receber_copia">
-                    <label for="receber_copia">Desejo receber uma cópia deste e-mail</label>
-                    <br><br>
-                    <div class="g-recaptcha" data-sitekey="6Le7q3wpAAAAAMPtEqpO9_Tzy1z7ML2NwM_RyxiN"></div>
-                    <br><br>
-                    <input type="submit" value="Enviar">
+            font-size: 20px;
+        }
 
-                </form>
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
 
+        textarea {
+            height: 150px;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            float: right;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<main>
+    <div style="margin-left: auto; margin-right: auto; width: 800px; padding-top: 100px; padding-bottom: 600px;">
+        <div>
+            <div style=" height:500px; width: 300px; float:left; ">
+
+                <div class="titulo_a">MORADA</div>
+                <div class="titulo_b"><?php echo $contactos['morada'] ?></div>
+                <br>
+                <div class="titulo_a">TELEFONE</div>
+                <div class="titulo_b"><?php echo $contactos['telefone'] ?></div>
+                <br>
+                <div class="titulo_a">FACEBOOK</div>
+                <div class="titulo_b"><?php echo $contactos['link_facebook'] ?></div>
+                <br>
+                <div class="titulo_a">E-MAIL</div>
+                <div class="titulo_b"><?php echo $contactos['email'] ?></div>
             </div>
         </div>
 
+        <div class="">
+            <div style=" height:500px; width: 500px; float:right; ">
+                <div class="container">
+                    <form action="enviar_mensagem_contactos.php" method="POST" id="myForm">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Insira aqui o seu nome">
+                        <br>
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" placeholder="Insira aqui o seu e-mail">
+                        <br>
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Insira aqui o seu telefone">
+                        <br>
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Insira aqui o assunto">
+                        <br>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Insira aqui a sua mensagem"></textarea>
+                        <br>
+                        <input type="checkbox" id="copia" name="copia">
+                        <label for="copia">Quero receber uma cópia desta mensagem no meu e-mail</label>
+                        <br>
+                        <input type="submit" value="Enviar" onclick="submitForm()">
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+</main>

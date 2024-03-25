@@ -18,13 +18,12 @@ $empreendimentos = getAllEmpreendimentosMenu();
   <meta name="description" content="CodeMaster Final Project">
   <meta name="author" content="Ricardo Santos">
   <title> <?= $actual_menu; ?> </title>
-  <link rel="stylesheet" href="./static/bootstrap.min.css">
-  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/bootstrap.css">
+  <script src=".static/bootstrap.js"></script>
+  <link rel="stylesheet" href="./static/estilo.css">
   <link rel="stylesheet" href="./static/fonts/fontes.css">
-  <link rel="stylesheet" href="./static/header.css">
-  <link rel="stylesheet" href="./static/footer.css">
-  <link rel="stylesheet" href="./static/responsive.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
 
 <body>
@@ -89,11 +88,11 @@ $empreendimentos = getAllEmpreendimentosMenu();
                 </li>
                 <li class="mobile-divider"></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">CENTRO DE FÉRIAS</a>
+                  <a class="nav-link" href="ferias.php">CENTRO DE FÉRIAS</a>
                 </li>
                 <li class="mobile-divider"></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">CONTACTOS</a>
+                  <a class="nav-link" href="contactos.php">CONTACTOS</a>
                 </li>
               </ul>
             </div>
@@ -102,14 +101,14 @@ $empreendimentos = getAllEmpreendimentosMenu();
       </div>
       <!-- Mobile Navbar -->
       <!-- Desktop Navbar  -->
-      <nav class="col-auto d-flex justify-content-center align-items-center gap-3 d-none d-lg-flex" id="nav-top">
+      <nav class="col-auto d-flex justify-content-center align-items-center gap-3 d-none d-lg-flex " id="nav-top">
         <a href="index.php">HOME</a>
         <a href="quem_somos.php">QUEM SOMOS</a>
         <a href="socios.php">SÓCIOS</a>
         <a href="noticias.php">NOTÍCIAS</a>
         <a href="destaques.php">DESTAQUES</a>
         <div class="dropdown">
-          <a class="" href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false"> EMPREENDIMENTOS </a>
+          <a class="nav-link dropdown-toggle " href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false"> EMPREENDIMENTOS </a>
           <ul class="dropdown-menu">
 
             <?php foreach ($empreendimentos as $i => $e) : ?>
@@ -127,38 +126,38 @@ $empreendimentos = getAllEmpreendimentosMenu();
               </li>
 
             <?php endforeach; ?>
-
           </ul>
         </div>
+
         <a href="ferias.php">CENTRO DE FÉRIAS</a>
-        <a href="#">CONTACTOS</a>
+        <a href="contactos.php">CONTACTOS</a>
+
+
       </nav>
       <!-- Desktop Navbar  -->
       <!-- Carousel -->
-      <div class="row">
-        <div class="col-12 p-2">
-          <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
 
-              <?php foreach ($carousel as $i => $c) : ?>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" style="  padding-right: calc(var(--bs-gutter-x) * .0);
+  padding-left: calc(var(--bs-gutter-x) * .0);">
+        <div class="carousel-indicators">
 
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<?= $i; ?>" class="<?= ($i == 0) ? "active" : ""; ?>" aria-current="true" aria-label="<?= $i + 1; ?>"></button>
+          <?php foreach ($carousel as $i => $c) : ?>
 
-              <?php endforeach; ?>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<?= $i; ?>" class="<?= ($i == 0) ? "active" : ""; ?>" aria-current="true" aria-label="<?= $i + 1; ?>"></button>
+
+          <?php endforeach; ?>
+        </div>
+        <div class="carousel-inner">
+
+          <?php foreach ($carousel as $i => $c) : ?>
+
+            <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="10000">
+              <img src="<?= $c['imagem']; ?>" class="d-block w-100" alt="..." />
+              <div class="myShadow"></div>
             </div>
-            <div class="carousel-inner">
 
-              <?php foreach ($carousel as $i => $c) : ?>
+          <?php endforeach; ?>
 
-                <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="10000">
-                  <img src="<?= $c['imagem']; ?>" class="d-block w-100" alt="..." />
-                  <div class="myShadow"></div>
-                </div>
-
-              <?php endforeach; ?>
-
-            </div>
-          </div>
         </div>
       </div>
       <!-- Carousel -->
