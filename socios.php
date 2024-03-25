@@ -1,7 +1,5 @@
 <?php
 
-$actual_menu = 'socios';
-
 require('templates/header_2.php');
 
 require('pages/socios.php');

@@ -1,6 +1,5 @@
 <?php
 
-$actual_menu = 'Destaques';
 
 require('templates/header_2.php');
 
