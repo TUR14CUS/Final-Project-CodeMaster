@@ -6,7 +6,7 @@ function getMinTextQuemSomos(){
 
     $minText = substr($texto, 0, 400);
 
-    return $minText;
+    return $texto;
 }
 
 function getQuemSomos(){

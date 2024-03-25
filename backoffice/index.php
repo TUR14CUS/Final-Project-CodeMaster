@@ -2,16 +2,11 @@
 
 require_once "../requirements.php";
 
-$form = isset($_POST['login'], $_POST['senha']);
-if ($form) {
-    $login = $_POST['login'];
-    $senha = $_POST['senha'];
 
-    if (doLogin($login, $senha)) {
-        header("Location: home.php");
-        exit;
-    }
-}
+
+
+
+//var_dump($_POST);
 
 ?>
 
@@ -19,46 +14,47 @@ if ($form) {
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CodeMaster Final Project">
-    <meta name="author" content="Ricardo Santos">
-    <title> Backoffice </title>
-    <link rel="stylesheet" href="static/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<title> Backoffice </title>
+<style>
+body {
+font-family: Arial, sans-serif; /* Setting font family to Arial */
+font-size: 16px; /* Increasing font size */
+}
+</style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
 <body>
 
-    <div class="container-fluid">
+<h1>Backoffice</h1>
 
-        <div class="row">
-            <div class="col-12 my-4 text-center">
-                <h1>Backoffice</h1>
-            </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-12 text-center">
+<form action="validarcaptcha.php" method="POST" id="login">
+	<label for="utilizador">Nome do utilizador:</label>
+	<br>
+	<input type="text" id="utilizador" name="utilizador">
+	<br><br>
+	<label for="senha">Senha:</label>
+	<br>
+	<input type="password" name="senha" id="senha">
+	<br><br>
+	<div class="g-recaptcha" data-sitekey="6Le18KApAAAAAEWUuTVYF1FiIvHMbBy4pwsTQ0aJ"></div>
+	<br><br>
+	<button type="submit" value="Entrar">Entrar</button>
+	<br><br>
+	<?php
+	$form = isset($_GET['erro']);
+if ($form && $form == "1") {
+echo "<p style='color:red;'>nome ou senha incorretos</p>";
+}
 
-            <?php if ($form) : ?>
-                <div class="alert alert-danger text-center" role="alert">
-                    <p>Utilizador ou senha inválidos</p>
-                </div>
-            <?php endif; ?>
+if ($form && $form == "2") {
+echo "<p style='color:red;'>capctha incorreto</p>";
+}
+	?>
 
-            <form action="" method="POST" id="login">
-                <input type="text" name="login" required placeholder="Login" autofocus>
-                <br><br>
-                <input type="password" name="senha" required placeholder="senha">
-                <br><br>
-                <input type="submit" value="Entrar">
-            </form>
-        </div>
-    </div>
+</form>
 
 </body>
-
 </html>
